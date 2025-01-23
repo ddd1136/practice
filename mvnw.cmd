@@ -169,7 +169,7 @@ IF NOT %WRAPPER_SHA_256_SUM%=="" (
        "}"^
        "}"
     if ERRORLEVEL 1 goto error
-)
+) 
 
 @REM Provide a "standardized" way to retrieve the CLI args that will
 @REM work with both Windows and non-Windows executions.
