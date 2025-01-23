@@ -1,4 +1,4 @@
-package com.example.authclothingstore.kafka;
+package com.example.authclothingstore.http;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

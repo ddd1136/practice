@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface OrderRepository extends JpaRepository<Order, Integer> {
-    List<Order> findAllByUserId(Integer userId);
+public interface StrategyRepository extends JpaRepository<Strategy, Integer> {
+    List<Strategy> findAllByUserId(Integer userId);
     boolean existsById(Integer id);
 }

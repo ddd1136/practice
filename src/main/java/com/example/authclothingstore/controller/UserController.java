@@ -18,8 +18,8 @@ import java.util.List;
 public class UserController {
 
     private final UserRepository userRepository;
-    private final ProductRepository productRepository;
-    private final OrderRepository orderRepository;
+    private final CompanyRepository companyRepository;
+    private final StrategyRepository orderRepository;
     private final ObjectMapper objectMapper;
 
 

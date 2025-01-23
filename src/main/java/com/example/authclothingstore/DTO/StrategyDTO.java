@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class OrderDTO {
+public class StrategyDTO {
     @JsonProperty("userId")
     private Integer userId;
 

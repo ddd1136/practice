@@ -22,7 +22,7 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<Order> orders = new HashSet<>();
+    private Set<Strategy> strategies = new HashSet<>();
 
     public User(String username, String password) {
 

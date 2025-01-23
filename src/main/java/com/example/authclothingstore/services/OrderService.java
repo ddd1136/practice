@@ -1,44 +1,42 @@
 package com.example.authclothingstore.services;
-import com.example.authclothingstore.DTO.OrderDTO;
-import com.example.authclothingstore.entity.Order;
-import com.example.authclothingstore.entity.Product;
+import com.example.authclothingstore.DTO.StrategyDTO;
+import com.example.authclothingstore.entity.Strategy;
+import com.example.authclothingstore.entity.Company;
 import com.example.authclothingstore.entity.User;
-import com.example.authclothingstore.entity.OrderRepository;
-import com.example.authclothingstore.entity.ProductRepository;
+import com.example.authclothingstore.entity.StrategyRepository;
+import com.example.authclothingstore.entity.CompanyRepository;
 import com.example.authclothingstore.entity.UserRepository;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Data
 @Service
 public class OrderService {
 
     @Autowired
-    private OrderRepository orderRepository;
+    private StrategyRepository orderRepository;
 
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
-    private ProductRepository productRepository;
+    private CompanyRepository companyRepository;
 
     @Transactional
-    public Order createOrder(OrderDTO orderDTO) {
-        List<Product> products = productRepository.findAllById(orderDTO.getProductId());
-        User user = userRepository.findById(orderDTO.getUserId())
-                .orElseThrow(() -> new RuntimeException("User not found with id: " + orderDTO.getUserId()));
+    public Strategy createOrder(StrategyDTO strategyDTO) {
+        List<Company> companies = companyRepository.findAllById(strategyDTO.getProductId());
+        User user = userRepository.findById(strategyDTO.getUserId())
+                .orElseThrow(() -> new RuntimeException("User not found with id: " + strategyDTO.getUserId()));
 
-        Order newOrder = Order.builder()
+        Strategy newStrategy = Strategy.builder()
                 .user(user)
-                .productList(products)
+                .companyList(companies)
                 .build();
 
-        return orderRepository.save(newOrder);
+        return orderRepository.save(newStrategy);
     }
 }

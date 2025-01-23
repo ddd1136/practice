@@ -1,4 +1,4 @@
-package com.example.authclothingstore.kafka;
+package com.example.authclothingstore.http;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

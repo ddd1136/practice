@@ -16,7 +16,7 @@ import java.util.List;
 @Entity
 @Table(name = "orders")
 @JsonPropertyOrder({"orderId", "userId", "products"})
-public class Order {
+public class Strategy {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonProperty("orderId")
@@ -37,6 +37,6 @@ public class Order {
     )
 
     @JsonProperty(value = "products")
-    private List<Product> productList = new ArrayList<>();
+    private List<Company> companyList = new ArrayList<>();
     
 }

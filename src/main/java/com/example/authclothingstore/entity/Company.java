@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "products")
-public class Product {
+public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -30,6 +30,5 @@ public class Product {
     @Column(name = "quantity",  nullable = true)
     private Integer quantity;
 
-    @ManyToMany(mappedBy = "productList", cascade = CascadeType.ALL)
-    private List<Order> orders = new ArrayList<>();
+
 }
