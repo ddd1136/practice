@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>auth-clothing-store</artifactId>
+	<artifactId>strategy-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>auth-clothing-store</name>
 	<description>Demo project for Spring Boot</description>
@@ -76,7 +76,16 @@
 			<artifactId>spring-kafka-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>6.2.3</version>
+        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
