@@ -1,6 +1,6 @@
 FROM openjdk:17
 
-ARG APP_JAR=*.jar
+ARG APP_JAR=*.jar 
 
 COPY ${APP_JAR} app.jar
 
